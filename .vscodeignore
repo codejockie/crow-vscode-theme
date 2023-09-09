@@ -1,0 +1,10 @@
+.vscode
+.gitignore
+.eslint*
+*.vsix
+resources/update-keys.ts
+node_modules
+pnpm-lock.yaml
+src
+examples
+tsconfig.json
