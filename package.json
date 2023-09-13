@@ -1,22 +1,18 @@
 {
   "publisher": "codejockie",
-  "name": "codejockie-dark-theme",
-  "displayName": "Codejockie Dark Theme",
-  "version": "0.2.6",
-  "description": "Codejockie's Dark theme for VS Code",
+  "name": "crow",
+  "displayName": "Crow",
+  "version": "0.0.1",
+  "description": "Provides themes for VS Code.",
   "license": "MIT",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codejockie/vscode-theme-codejockie"
-  },
-  "bugs": {
-    "url": "https://github.com/codejockie/vscode-theme-codejockie/issues"
-  },
+  "preview": true,
   "keywords": [
     "theme",
     "light",
-    "dark"
+    "dark",
+    "codejockie",
+    "high contrast"
   ],
   "categories": [
     "Themes"
@@ -31,9 +27,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Codejockie Dark",
+        "label": "Crow Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/codejockie-dark-color-theme.json"
+        "path": "./themes/crow-dark-color-theme.json"
+      },
+      {
+        "label": "Crow High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/crow-dark-high-contrast-color-theme.json"
       }
     ]
   },
@@ -47,7 +48,6 @@
     "release": "bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^0.2.1",
     "@types/node": "^20.4.8",
     "@types/tinycolor2": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
@@ -60,5 +60,12 @@
     "tinycolor2": "^1.6.0",
     "typescript": "^5.1.6"
   },
-  "preview": true
+  "bugs": {
+    "url": "https://github.com/codejockie/crow-vscode-theme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejockie/crow-vscode-theme"
+  },
+  "homepage": "https://github.com/codejockie/crow-vscode-theme/blob/main/README.md"
 }
