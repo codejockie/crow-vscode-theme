@@ -1,7 +1,7 @@
 /* eslint-disable quote-props */
 import { type Path, pathGet } from "object-standard-path";
-import { parseColor } from "../util";
-import type { TokenColor } from "../type";
+import { parseColour } from "../util";
+import type { TokenColour } from "../type";
 
 const fontStyles = ["italic", "bold", "underline", "strikethrough"] as const;
 
@@ -12,9 +12,9 @@ type Token = {
   fontStyle?: string;
 }[];
 
-export function generateTokenColor(tokens: TokenColor, plainColor: string) {
+export function generateTokenColour(tokens: TokenColour, plainColour: string) {
   const colour = (key: Path<typeof tokens>, alpha?: number) =>
-    parseColor(pathGet(tokens, key) as string, alpha);
+    parseColour(pathGet(tokens, key) as string, alpha);
   const font = (...styles: (typeof fontStyles)[number][] | []) =>
     styles
       .slice(0, 4)
@@ -201,12 +201,28 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         "support.constant.json",
         "entity.other.inherited-class",
       ],
-      foreground: "#58ffde",
+      foreground: "#58ffde", // Green Cyan
+    },
+    {
+      name: "Import/export destructure",
+      scope: [
+        "variable.other.readwrite.alias",
+        "meta.definition.variable",
+        "meta.object-binding-pattern-variable",
+      ],
+      foreground: colour("import"),
+    },
+    {
+      name: "Object destructure",
+      scope: [
+        "source variable.other.constant",
+      ],
+      foreground: "#348aee", // Blue
     },
     {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
-      foreground: "#9CDCFE",
+      foreground: colour("property.normal"),
     },
     // ============== JSON/YAML =================
     {
@@ -613,7 +629,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: ["meta.jsx.children"],
-      foreground: plainColor,
+      foreground: plainColour,
     },
   ];
   return {

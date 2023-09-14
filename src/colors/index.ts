@@ -1,10 +1,10 @@
-import type { BaseColor, TokenColor, UIColor, Theme } from "../type";
+import type { BaseColor, TokenColour, UIColor, Theme } from "../type";
 import dark from "./dark";
 import hcDark from "./hc-dark";
 
 export type Colors = {
   baseColor: BaseColor;
-  tokenColor: TokenColor;
+  tokenColor: TokenColour;
   uiColor: UIColor;
   theme: Theme;
 };

@@ -2,38 +2,38 @@ import tinycolor from "tinycolor2";
 import type { UI } from "./type";
 
 /**
- * unify color string to hex string
- * @param colorString color string
- * @param alpha color alpha value (0-1)
+ * Unify colour string to hex string
+ * @param colourString colour string
+ * @param alpha colour alpha value (0-1)
  */
-export function parseColor(colorString: string, alpha?: number) {
+export function parseColour(colourString: string, alpha?: number) {
   if (!alpha) {
-    return tinycolor(colorString).toHexString();
+    return tinycolor(colourString).toHexString();
   }
   alpha = Math.min(alpha, 1);
-  const tinycolorInstance = tinycolor(colorString).setAlpha(alpha);
+  const tinycolorInstance = tinycolor(colourString).setAlpha(alpha);
   return tinycolorInstance[alpha === 1 ? "toHexString" : "toHex8String"]();
 }
 
 /**
- * brighten the color string
- * @param colorString color string
+ * Brighten the colour string
+ * @param colourString colour string
  * @param amount brighten amount (0-100)
  */
-export function brighten(colorString: string, amount: number) {
-  return tinycolor(colorString).brighten(amount).toHexString();
+export function brighten(colourString: string, amount: number) {
+  return tinycolor(colourString).brighten(amount).toHexString();
 }
 
-export function getTextColor(bgColorString: string) {
-  const parsedColor = tinycolor(bgColorString);
-  return parsedColor.getBrightness() < 60 ? "#fafafa" : "#1d1d1d";
+export function getTextColour(bgColourString: string) {
+  const parsedColour = tinycolor(bgColourString);
+  return parsedColour.getBrightness() < 60 ? "#fafafa" : "#1d1d1d";
 }
 
-export function buildUI(themeDev: UI) {
+export function buildUI(themeUI: UI) {
   const theme = {};
 
-  for (const key in themeDev) {
-    const value = themeDev[key];
+  for (const key in themeUI) {
+    const value = themeUI[key];
 
     if (typeof value === "object") {
       for (const i in value) {

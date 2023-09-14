@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { buildTheme } from "./modules";
-import type { BaseColor, TokenColor, UIColor, Theme, UITheme } from "./type";
+import type { BaseColor, TokenColour, UIColor, Theme, UITheme } from "./type";
 import { colors } from "./colors";
 
 const author = "codejockie";
@@ -9,7 +9,7 @@ await mkdir("./themes", { recursive: true });
 export interface GenerateOption {
   name: string;
   baseColor: BaseColor;
-  tokenColor: TokenColor;
+  tokenColor: TokenColour;
   uiColor: UIColor;
   theme: Theme;
 }

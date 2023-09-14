@@ -16,6 +16,7 @@ export type BaseColor = {
   cyan: string;
   cyanBlue: string;
   lightCyan: string;
+  lightCyanBlue: string;
   sky: string;
   blue: string;
   purple: string;
@@ -26,7 +27,7 @@ export type BaseColor = {
   crow: string;
 };
 
-export type TokenColor = {
+export type TokenColour = {
   htmlTag: string;
   comment: string;
   string: string;
@@ -36,6 +37,7 @@ export type TokenColor = {
   boolean: string;
   operator: string;
   function: string;
+  import: string;
   property: {
     normal: string;
     declaration: string;

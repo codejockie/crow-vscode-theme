@@ -1,5 +1,5 @@
-import type { BaseColor, TokenColor, UIColor } from "../type";
-import { brighten, parseColor } from "../util";
+import type { BaseColor, TokenColour, UIColor } from "../type";
+import { brighten, parseColour } from "../util";
 import type { Colors } from ".";
 
 const blue = {
@@ -17,22 +17,23 @@ const blue = {
 };
 
 export const base: BaseColor = {
-  gray: parseColor("hsl(0, 0%, 50%)"),
-  red: parseColor("hsl(0, 100%, 76%)"),
-  orange: parseColor("hsl(20, 80%, 72%)"),
-  yellow: parseColor("hsl(36, 78%, 78%)"),
-  lightYellow: parseColor("hsl(28, 32%, 84%)"),
-  lightGreen: parseColor("hsl(76, 72%, 70%)"),
-  green: parseColor("hsl(130, 35%, 65%)"),
-  cyan: parseColor("hsl(180, 52%, 75%)"),
-  sky: parseColor("hsl(212, 85%, 87%)"),
-  blue: parseColor("hsl(210, 100%, 72%)"),
-  purple: parseColor("hsl(247, 100%, 82%)"),
-  pink: parseColor("hsl(328, 70%, 78%)"),
-  desaturatedOrange: "#CE9178",
+  gray: parseColour("hsl(0, 0%, 50%)"),
+  red: parseColour("hsl(0, 100%, 76%)"),
+  orange: parseColour("hsl(20, 80%, 72%)"),
+  yellow: parseColour("hsl(36, 78%, 78%)"),
+  lightYellow: parseColour("hsl(28, 32%, 84%)"),
+  lightGreen: parseColour("hsl(76, 72%, 70%)"),
+  green: parseColour("hsl(130, 35%, 65%)"),
+  cyan: parseColour("hsl(180, 52%, 75%)"),
+  sky: parseColour("hsl(212, 85%, 87%)"),
+  blue: parseColour("hsl(210, 100%, 72%)"),
+  purple: parseColour("hsl(247, 100%, 82%)"),
+  pink: parseColour("hsl(328, 70%, 78%)"),
+  desaturatedOrange: "#ce9178",
   lightOrange: "#ff9f79",
   cyanBlue: "#569cd6",
   lightCyan: "#9cdcfe",
+  lightCyanBlue: "#c2dcfa",
   lavenderMagenta: "#ff84f5",
   greenCyan: "#57f8d8",
   greenShade: "#74d349",
@@ -67,7 +68,7 @@ export const uiColor: UIColor = {
   inactiveBackground: "#000000",
   inactiveForeground: "#cccccc",
   lineHighlight: "#1c1c1c",
-  primary: parseColor("hsl(210, 28%, 52%)"),
+  primary: parseColour("hsl(210, 28%, 52%)"),
   secondary: "#2b2b5a",
   cursor: "#5f3b23",
   selection: "#ffffff33",
@@ -83,7 +84,7 @@ export const uiColor: UIColor = {
   wordHighlight: "#575757",
 };
 
-export const tokenColor: TokenColor = {
+export const tokenColor: TokenColour = {
   htmlTag: base.red,
   comment: base.greenShade,
   string: base.desaturatedOrange,
@@ -93,12 +94,13 @@ export const tokenColor: TokenColor = {
   boolean: base.purple,
   operator: base.sky,
   function: base.yellow,
+  import: base.sky,
   property: {
     normal: base.lightCyan,
     declaration: base.lightCyan,
     defaultLib: base.lightGreen,
   },
-  parameter: base.yellow,
+  parameter: "#ee9834",// ~Deep safron,
   variable: {
     local: base.yellow,
     defaultLib: base.pink,

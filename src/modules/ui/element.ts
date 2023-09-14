@@ -1,5 +1,5 @@
 import type { GenerateUIFn } from "../../type";
-import { parseColor } from "../../util";
+import { parseColour } from "../../util";
 
 export const generateElementColor: GenerateUIFn = (ui) => ({
   badge: {
@@ -55,9 +55,9 @@ export const generateElementColor: GenerateUIFn = (ui) => ({
     background: "#ff5500",
   },
   scrollbarSlider: {
-    background: parseColor(ui.scrollbar, 0.2),
-    hoverBackground: parseColor(ui.scrollbar, 0.3),
-    activeBackground: parseColor(ui.scrollbar, 0.5),
+    background: parseColour(ui.scrollbar, 0.2),
+    hoverBackground: parseColour(ui.scrollbar, 0.3),
+    activeBackground: parseColour(ui.scrollbar, 0.5),
   },
   tab: {
     activeBackground: ui.background,
