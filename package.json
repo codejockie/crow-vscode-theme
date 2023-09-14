@@ -3,7 +3,7 @@
   "name": "crow",
   "displayName": "Crow",
   "version": "0.0.1",
-  "description": "Provides themes for VS Code.",
+  "description": "A colourful high contrast theme with support for fancy fonts.",
   "license": "MIT",
   "type": "module",
   "preview": true,
@@ -17,7 +17,7 @@
   "categories": [
     "Themes"
   ],
-  "icon": "./resources/icon.png",
+  "icon": "resources/icon.png",
   "files": [
     "themes"
   ],
@@ -67,5 +67,8 @@
     "type": "git",
     "url": "https://github.com/codejockie/crow-vscode-theme"
   },
-  "homepage": "https://github.com/codejockie/crow-vscode-theme/blob/main/README.md"
+  "homepage": "https://github.com/codejockie/crow-vscode-theme/blob/main/README.md",
+  "sponsor": {
+    "url": "https://www.buymeacoffee.com/codejockie"
+  }
 }
