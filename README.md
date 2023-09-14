@@ -1,11 +1,10 @@
-## Crow Dark Theme for VS Code
+## Crow Theme
 
-A colourful dark theme with high contrast.
+A colourful high contrast theme. Supports fancy fonts like Operator, Maple etc.
 
 ![](resources/preview.png)
 
-## Credit
-
+## Credits
 - Design inspiration: [aramoki](https://github.com/aramoki/aramoks-black)
 - Project structure: [vitesse](https://github.com/antfu/vscode-theme-vitesse)
 
