@@ -976,8 +976,10 @@
     },
     {
       "scope": [
+        "entity.name.variable.local.cs",
         "variable.other.object.cs",
-        "variable.other.object.property.cs"
+        "variable.other.object.property.cs",
+        "variable.other.readwrite.cs"
       ],
       "settings": {
         "foreground": "#9cdcfe"
@@ -985,19 +987,30 @@
     },
     {
       "scope": [
-        "keyword.control.cs"
+        "keyword.control.cs",
+        "keyword.other.using.cs"
       ],
       "settings": {
-        "foreground": "#aea3ff",
+        "foreground": "#ff84f5",
         "fontStyle": ""
       }
     },
     {
       "scope": [
-        "keyword.other.using.cs"
+        "keyword.other.var.cs"
       ],
       "settings": {
-        "foreground": "#ff84f5",
+        "foreground": "#aea3ff",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type.cs",
+        "entity.name.type.namespace.cs"
+      ],
+      "settings": {
+        "foreground": "#57f8d8",
         "fontStyle": ""
       }
     },

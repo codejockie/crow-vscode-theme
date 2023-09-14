@@ -214,9 +214,7 @@ export function generateTokenColour(tokens: TokenColour, plainColour: string) {
     },
     {
       name: "Object destructure",
-      scope: [
-        "source variable.other.constant",
-      ],
+      scope: ["source variable.other.constant"],
       foreground: "#348aee", // Blue
     },
     {
@@ -577,14 +575,14 @@ export function generateTokenColour(tokens: TokenColour, plainColour: string) {
     // C#
     {
       scope: [
-        // 'entity.name.type.class',
         // 'variable.other.property',
         // 'variable.other.enummember',
         // 'variable.other.constant.property',
+        "entity.name.variable.local.cs",
         "variable.other.object.cs",
         "variable.other.object.property.cs",
+        "variable.other.readwrite.cs",
       ],
-      // fontStyle: font('bold'),
       foreground: colour("property.normal"),
     },
     {
@@ -595,15 +593,20 @@ export function generateTokenColour(tokens: TokenColour, plainColour: string) {
         // 'storage.modifier.cs',
         // 'variable.language.this.cs',
         // 'source keyword.cs',
-        // 'keyword.other.using.cs',
+        "keyword.other.using.cs",
       ],
       fontStyle: font(),
+      foreground: colour("keywordAlt"),
+    },
+    {
+      scope: ["keyword.other.var.cs"],
+      fontStyle: font("italic"),
       foreground: colour("keyword"),
     },
     {
-      scope: ["keyword.other.using.cs"],
+      scope: ["entity.name.type.cs", "entity.name.type.namespace.cs"],
       fontStyle: font(),
-      foreground: colour("keywordAlt"),
+      foreground: colour("class"),
     },
     // Java
     {
