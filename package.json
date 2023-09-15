@@ -2,7 +2,7 @@
   "publisher": "codejockie",
   "name": "crow",
   "displayName": "Crow",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A colourful high contrast theme with support for fancy fonts.",
   "license": "MIT",
   "type": "module",
